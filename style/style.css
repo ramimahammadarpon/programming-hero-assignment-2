@@ -28,6 +28,10 @@
   justify-content: space-between;
   align-items: center;
 }
+.nav-bar i {
+    display: none;
+    font-size: 30px;
+}
 .nav-bar .logo h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -391,6 +395,12 @@ footer .right, footer .middle, footer .left {
     width: clac(100% - 20px);
     padding: 10px;
   }
+  .nav-bar i {
+    display: block;
+  }
+  .nav-bar .btn-primary {
+    display: none;
+  }
   .nav-bar .logo h3 {
     display: none;
   }
@@ -449,6 +459,15 @@ footer .right, footer .middle, footer .left {
     top: -22px;
     left: 22px;
   }
+  .section-2 .btn-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+  }
+  .section-2 .view-btn {
+    padding: 10px 37px 10px 37px;
+    font-size: 1rem;
+}
   footer .text-container {
     flex-direction: column;
     gap: 32px;
@@ -457,4 +476,5 @@ footer .right, footer .middle, footer .left {
   footer .right, footer .middle, footer .left {
     width: 90%;
 }
+
 }
