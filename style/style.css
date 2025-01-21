@@ -24,13 +24,14 @@
   max-width: 1158px;
 }
 .nav-bar {
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .nav-bar i {
-    display: none;
-    font-size: 30px;
+  display: none;
+  font-size: 30px;
 }
 .nav-bar .logo h3 {
   font-size: 2rem;
@@ -214,10 +215,10 @@
   overflow: hidden;
   background-color: white;
 }
-.box-container .box .text-container  .box-title {
-    margin: 0px 38px 34px 38px;
-    font-size: 1rem;
-  }
+.box-container .box .text-container .box-title {
+  margin: 0px 38px 34px 38px;
+  font-size: 1rem;
+}
 
 .box-container .box-1 .date {
   font-family: "raleway";
@@ -331,60 +332,101 @@
   font-size: 1.2rem;
 }
 footer {
-    width: 100%;
-    background-color: #01ACFD;
-    font-family: 'quicksand';
-    color: white;
+  width: 100%;
+  background-color: #01acfd;
+  font-family: "quicksand";
+  color: white;
 }
 footer .text-container {
-    padding: 123px 0 174px 140px;
-    display: flex;
-    justify-content: space-between;
+  padding: 100px 0 174px 140px;
+  display: flex;
+  justify-content: space-between;
 }
 footer .text-container .fot-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
 }
 footer .text-container .fot-logo img {
-    width: 81px;
+  width: 81px;
 }
 footer .text-container .left .fot-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 footer .text-container .left .fot-description {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 footer .text-container .middle .title {
-    font-size: 1.2rem;
-    margin-bottom: 32px;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
 }
 footer .text-container .middle .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 footer .text-container .middle .menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
 }
 footer .text-container .right .title {
-    font-size: 1.5rem;
-    margin-bottom: 32px;
+  font-size: 1.5rem;
+  margin-bottom: 32px;
 }
 footer .text-container .right .fot-icons {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
-footer .right, footer .middle, footer .left {
-    width: 21%;
+footer .right,
+footer .middle,
+footer .left {
+  width: 26%;
 }
 .hidden {
   display: none;
 }
+/* This is marquee for my programming hero 2nd project */
+footer .marquee-container {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+   }
+   footer .marquee-container .response {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    transform:translateX(100%);	
+    animation: example1 15s linear infinite;
+   }
+footer .marquee-container .non-response {
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    transform:translateX(100%);	
+    animation: example1 15s linear infinite;
+   }
+   @-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
 
 @media screen and (max-width: 576px) {
   .header {
@@ -398,7 +440,7 @@ footer .right, footer .middle, footer .left {
   .nav-bar .logo img {
     height: 46px;
     width: 46px;
-}
+  }
   .nav-bar i {
     display: block;
   }
@@ -450,7 +492,7 @@ footer .right, footer .middle, footer .left {
     margin-top: 40px;
     font-size: 1.6rem;
     line-height: 57.5px;
-}
+  }
   .section-2 .box-container {
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
@@ -483,14 +525,25 @@ footer .right, footer .middle, footer .left {
     padding: 0px 37px;
     line-height: 30px;
     font-size: 1rem;
-}
+  }
   footer .text-container {
     flex-direction: column;
     gap: 32px;
     padding: 20px;
   }
-  footer .right, footer .middle, footer .left {
+  footer .right,
+  footer .middle,
+  footer .left {
     width: 90%;
-}
-
+  }
+  footer .text-container {
+    padding-top: 20px;
+  }
+  footer .marquee-container .non-response{
+    display: none;
+  }
+  footer .marquee-container .response {
+    display: block;
+    font-size: 1em;
+  }
 }
